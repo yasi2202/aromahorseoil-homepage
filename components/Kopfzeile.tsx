@@ -8,7 +8,7 @@ import { links, marke } from "@/lib/inhalte";
 const menue = [
   { ziel: "/#riechtest", text: "Der Riechtest" },
   { ziel: "/#oele", text: "Die Öle" },
-  { ziel: "/#ausbildung", text: "Ausbildung" },
+  { ziel: "/aroma-horse-kurs", text: "Der Kurs" },
   { ziel: "/#ueber-mich", text: "Über mich" },
   { ziel: "/#fragen", text: "Fragen" },
 ];

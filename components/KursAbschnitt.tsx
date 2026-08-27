@@ -1,7 +1,8 @@
-import { ausbildung, links } from "@/lib/inhalte";
+import Link from "next/link";
+import { kurs, links } from "@/lib/inhalte";
 import Tropfen from "@/components/Tropfen";
 
-export default function Ausbildung() {
+export default function KursAbschnitt() {
   return (
     <section
       id="ausbildung"
@@ -9,16 +10,16 @@ export default function Ausbildung() {
     >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
         <div className="blende lg:sticky lg:top-28 lg:self-start">
-          <p className="gesperrt text-terra">{ausbildung.augenbraue}</p>
+          <p className="gesperrt text-terra">{kurs.augenbraue}</p>
           <h2 className="mt-4 font-serif text-[clamp(2rem,4.6vw,3.1rem)] leading-[1.1] tracking-[-0.015em]">
-            {ausbildung.titel}
+            {kurs.titel}
           </h2>
           <p className="mt-6 text-[16.5px] leading-[1.8] text-tinte-weich">
-            {ausbildung.text}
+            {kurs.text}
           </p>
 
           <ul className="mt-7 space-y-2.5">
-            {ausbildung.eckdaten.map((e) => (
+            {kurs.eckdaten.map((e) => (
               <li
                 key={e}
                 className="flex items-center gap-3 text-[15px] text-tinte-weich"
@@ -30,21 +31,25 @@ export default function Ausbildung() {
           </ul>
 
           <div className="mt-9">
-            <a
-              href={links.ausbildung}
+            <Link
+              href={links.kursSeite}
               className="inline-block bg-terra text-creme font-semibold text-[15px] px-7 py-3.5 rounded-full hover:bg-terra-tief transition-colors"
             >
-              {ausbildung.knopf}
-            </a>
+              {kurs.knopf}
+            </Link>
+            <p className="mt-4 text-[15px] text-tinte-weich">
+              {kurs.preis}{" "}
+              <span className="text-tinte-weich/80">— {kurs.preisZusatz}</span>
+            </p>
             <p className="mt-5 text-[14px] text-tinte-weich">
-              {ausbildung.hinweisTeilnehmerin}{" "}
+              {kurs.hinweisTeilnehmerin}{" "}
               <a
                 href={links.akademie}
                 target="_blank"
                 rel="noopener"
                 className="text-terra-tief underline underline-offset-4 hover:text-tinte"
               >
-                {ausbildung.knopfTeilnehmerin}
+                {kurs.knopfTeilnehmerin}
               </a>
             </p>
           </div>
@@ -54,7 +59,7 @@ export default function Ausbildung() {
             Chemie, dann das Pferd, dann die Anwendung. Deshalb sind sie
             durchnummeriert und nicht als Kacheln gestreut. */}
         <ol className="blende border-t border-linie">
-          {ausbildung.phasen.map((phase, i) => (
+          {kurs.phasen.map((phase, i) => (
             <li
               key={phase}
               className="flex items-baseline gap-5 sm:gap-7 py-4 border-b border-linie group"

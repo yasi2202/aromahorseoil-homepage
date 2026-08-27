@@ -33,8 +33,8 @@ export default function Fusszeile() {
               </Link>
             </li>
             <li>
-              <Link href="/#ausbildung" className="hover:text-tinte">
-                Die Ausbildung
+              <Link href={links.kursSeite} className="hover:text-tinte">
+                Der Kurs
               </Link>
             </li>
             <li>
@@ -76,6 +76,16 @@ export default function Fusszeile() {
             <li>
               <Link href="/datenschutz" className="hover:text-tinte">
                 Datenschutz
+              </Link>
+            </li>
+            <li>
+              <Link href="/agb" className="hover:text-tinte">
+                AGB
+              </Link>
+            </li>
+            <li>
+              <Link href="/widerrufsbelehrung" className="hover:text-tinte">
+                Widerrufsrecht
               </Link>
             </li>
           </ul>

@@ -2,11 +2,11 @@ import Kopfbereich from "@/components/Kopfbereich";
 import Riechtest from "@/components/Riechtest";
 import Oelkarte from "@/components/Oelkarte";
 import GuideBand from "@/components/GuideBand";
-import Ausbildung from "@/components/Ausbildung";
+import KursAbschnitt from "@/components/KursAbschnitt";
 import UeberMich from "@/components/UeberMich";
 import Fragen from "@/components/Fragen";
 import Abschluss from "@/components/Abschluss";
-import { ausbildung, fragen } from "@/lib/inhalte";
+import { kurs, fragen } from "@/lib/inhalte";
 import { url } from "@/lib/seo";
 
 // ---------------------------------------------------------------------------
@@ -33,8 +33,8 @@ const strukturierteDaten = {
     {
       "@type": "Course",
       "@id": url("/#ausbildung"),
-      name: ausbildung.titel,
-      description: ausbildung.text,
+      name: kurs.titel,
+      description: kurs.text,
       inLanguage: "de-DE",
       provider: { "@id": url("/#unternehmen") },
       hasCourseInstance: {
@@ -56,7 +56,7 @@ export default function Startseite() {
       <Riechtest />
       <Oelkarte />
       <GuideBand />
-      <Ausbildung />
+      <KursAbschnitt />
       <UeberMich />
       <Fragen />
       <Abschluss />

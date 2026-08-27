@@ -19,10 +19,17 @@ export const links = {
   /** Der kostenlose Öl-Guide. Liegt bei alfima, genau wie in deiner Instagram-Bio. */
   oelGuide: "https://alfima.com/pferdeliebehealthy/p/ai-page-3",
 
-  /** ▲ HIER EINTRAGEN, sobald die Verkaufsseite der Ausbildung steht.
-      Solange keine da ist, führt der Knopf zu einer Mail an dich. */
-  ausbildung:
-    "mailto:info@pferdeliebehealthy.de?subject=Aroma%20Horse%20Ausbildung",
+  /** Die eigene Verkaufsseite für den Kurs. */
+  kursSeite: "/aroma-horse-kurs",
+
+  /** ▲ HIER EINTRAGEN, sobald das Produkt „Aroma Horse Kurs“ bei alfima steht.
+      Solange nichts eingetragen ist, führt der Kaufknopf zu einer Mail an dich —
+      niemand landet auf einer Fehlerseite.
+
+      WICHTIG: Der Produktname bei alfima muss das Wort „Horse“ enthalten.
+      Daran erkennt die Akademie, welchen Kurs sie freischalten soll. Ein Name
+      mit „Ausbildung“ statt „Horse“ würde die Fütterungs-Masterclass öffnen. */
+  kaufen: "mailto:info@pferdeliebehealthy.de?subject=Aroma%20Horse%20Kurs",
 
   /** Wo die Teilnehmerinnen ihre Lektionen finden */
   akademie: "https://akademieapp.vercel.app",
@@ -150,10 +157,25 @@ export const guide = {
 // ---------------------------------------------------------------------------
 // Die Ausbildung
 // ---------------------------------------------------------------------------
-export const ausbildung = {
+// ---------------------------------------------------------------------------
+// Der Kurs
+//
+// ACHTUNG, das ist keine Wortklauberei: Der Kurs heißt „Kurs“ und nicht
+// „Ausbildung“, und nirgends auf dieser Seite steht etwas von Zertifikat,
+// Prüfung, Korrektur oder Betreuung. Genau daran hängt, dass er ohne
+// ZFU-Zulassung verkauft werden darf. Sobald hier ein Abschluss versprochen
+// wird, ist es Fernunterricht — und ohne Zulassung wäre der Kaufvertrag
+// unwirksam.
+//
+// Wenn die Zulassung eines Tages da ist, kommt die geprüfte Fassung als
+// eigenes Produkt dazu; diese hier bleibt, wie sie ist.
+// ---------------------------------------------------------------------------
+export const kurs = {
   augenbraue: "Für alle, die tiefer wollen",
-  titel: "Aroma Horse — die Ausbildung",
-  text: "Zehn Phasen von den Grundlagen der Destillation bis zur eigenen Anwendung am Pferd. Kein Öllexikon zum Auswendiglernen, sondern der Weg dahin, dass du eigene Entscheidungen fachlich begründen kannst. Online, in deinem Tempo, mit Notizen, Lesezeichen und Reflexionsfragen zu jeder Lektion.",
+  titel: "Aroma Horse — der Kurs",
+  preis: "397 €",
+  preisZusatz: "einmalig, dauerhafter Zugang",
+  text: "Zehn Phasen von den Grundlagen der Destillation bis zur eigenen Anwendung am Pferd. Kein Öllexikon zum Auswendiglernen, sondern der Weg dahin, dass du eigene Entscheidungen fachlich begründen kannst. Online, in deinem Tempo, an jeder Lektion Platz für deine Notizen.",
   phasen: [
     "Hydrolate für Pferde",
     "Grundlagen der Aromatherapie",
@@ -171,9 +193,72 @@ export const ausbildung = {
     "Zeitlich unbegrenzter Zugang",
     "Läuft im Browser, auch am Handy im Stall",
   ],
-  knopf: "Platz anfragen",
+  knopf: "Kurs ansehen",
+  knopfKaufen: "Kurs kaufen",
   hinweisTeilnehmerin: "Du bist schon dabei?",
   knopfTeilnehmerin: "Zu deinen Lektionen",
+};
+
+// ---------------------------------------------------------------------------
+// Die Verkaufsseite unter /aroma-horse-kurs
+// ---------------------------------------------------------------------------
+export const kursSeite = {
+  augenbraue: "Der Kurs",
+  titel: "Alles, was ich über Öle beim Pferd weiß.",
+  vorspann:
+    "Zehn Phasen, 54 Lektionen. Von der Frage, was bei einer Destillation eigentlich passiert, bis zu dem Tag, an dem du vor deinem Pferd stehst und weißt, warum du gerade dieses Fläschchen in der Hand hältst.",
+
+  /** Für wen der Kurs gedacht ist — und für wen nicht. Beides ehrlich. */
+  fuerWen: {
+    titel: "Für wen das ist",
+    passt: [
+      "Du hast ein eigenes Pferd und willst mehr können, als einer Empfehlung aus dem Internet zu folgen.",
+      "Du willst verstehen, warum ein Öl wirkt, nicht nur, dass es wirkt.",
+      "Du hast schon ein paar Fläschchen zu Hause und traust dich nicht richtig daran.",
+      "Du arbeitest bereits mit Pferden und willst Aromapflege dazunehmen.",
+    ],
+    passtNicht: [
+      "Du suchst eine Liste „Öl X gegen Problem Y“. Die gibt es hier nicht, und ich halte sie für gefährlich.",
+      "Du willst einen anerkannten Abschluss. Dieser Kurs ist Lernmaterial, keine geprüfte Ausbildung.",
+      "Du erwartest, dass ich dein Pferd aus der Ferne einschätze. Das mache ich nicht.",
+    ],
+  },
+
+  /** Was die Käuferin bekommt — und was ausdrücklich nicht dabei ist. */
+  umfang: {
+    titel: "Was du bekommst",
+    drin: [
+      "Zugang zu allen 54 Lektionen in der Akademie, sofort nach dem Kauf",
+      "Lesen im Browser, am Rechner wie am Handy im Stall",
+      "Notizen, Lesezeichen und Textmarker zu jeder Lektion, die dir bleiben",
+      "Reflexionsfragen zum Selbstnachdenken",
+      "Zeitlich unbegrenzter Zugang, auch zu späteren Ergänzungen",
+    ],
+    nichtDrin: [
+      "Keine Abschlussarbeit und keine Korrektur",
+      "Kein Zertifikat und kein Nachweis",
+      "Keine persönliche Begleitung und keine Beratung zu deinem Pferd",
+    ],
+    nichtDrinErklaerung:
+      "Das steht hier so deutlich, weil es ehrlicher ist als ein Sternchen im Kleingedruckten: Du kaufst Wissen, keine Betreuung. Wenn du eine geprüfte Ausbildung mit Abschluss suchst, ist das hier nicht das Richtige — melde dich, dann sage ich dir Bescheid, sobald es eine gibt.",
+  },
+
+  ehrlich: {
+    titel: "Zwei Dinge vorweg",
+    absaetze: [
+      "Ich verdiene an keinem einzigen Fläschchen. Ich empfehle keine Marke und bekomme von niemandem Provision. Deshalb steht in diesem Kurs, woran du gute Qualität selbst erkennst — statt einer Einkaufsliste, die mir nützt.",
+      "Und: Ätherische Öle sind Begleitung, keine Behandlung. Ein großer Teil dieses Kurses handelt davon, wann du die Finger davon lässt und stattdessen den Tierarzt rufst. Wer etwas anderes verspricht, verkauft dir etwas.",
+    ],
+  },
+
+  kauf: {
+    titel: "Aroma Horse Kurs",
+    preis: "397 €",
+    zusatz: "einmalig · dauerhafter Zugang · sofort freigeschaltet",
+    knopf: "Kurs kaufen",
+    hinweis:
+      "Nach dem Kauf bekommst du eine Mail mit deinem persönlichen Zugangslink zur Akademie. Klick drauf, und du bist drin — kein Passwort nötig.",
+  },
 };
 
 // ---------------------------------------------------------------------------
