@@ -36,7 +36,7 @@ const karla = Karla({
 
 const TITEL = "aromahorseoil | Ätherische Öle für dein Pferd";
 const BESCHREIBUNG =
-  "Aromatherapie für Pferde mit Yasemin Halac: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten. Kostenloser Öl-Guide und die Ausbildung Aroma Horse.";
+  "Aromatherapie für Pferde mit Yasemin Halac: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten. Kostenloser Öl-Guide und der Aroma Horse Kurs.";
 
 export const metadata: Metadata = {
   // Macht aus allen relativen Angaben unten vollständige Adressen. Ohne sie
@@ -58,7 +58,8 @@ export const metadata: Metadata = {
     "Riechtest Pferd",
     "Selbstselektion Pferd",
     "Aromapflege Pferd",
-    "Ausbildung Aromatherapie Pferd",
+    "Aromatherapie Pferd Kurs",
+    "Aromapflege lernen",
     "Odenwald",
   ],
   alternates: { canonical: "/" },
