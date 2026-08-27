@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Die Farben von aromahorseoil.
+
+   Sie kommen aus deinem Instagram-Auftritt: das Terrakotta der Beiträge, das
+   Sandbeige der Pampasgräser, ein warmes Creme als Grundfläche. Dazu ein
+   gedecktes Salbeigrün — das ist der Pflanzenanteil, und es sorgt dafür, dass
+   die Seite nicht in einem einzigen Braunton versinkt.
+
+   Die Marke Pferdeliebehealthy hat ihre eigenen Farben (Creme und Rosé).
+   Hier ist bewusst nichts davon übernommen: zwei Marken, zwei Anzüge.
+   --------------------------------------------------------------------------- */
+:root {
+  --creme: #FBF5EE;
+  --creme-tief: #F4E9DB;
+  --sand: #E9DAC5;
+  --sand-tief: #D9C3A6;
+  --terra: #B0543A;
+  --terra-tief: #8B3E29;
+  --salbei: #8E9779;
+  --tinte: #2C1D14;
+  --tinte-weich: #6E594A;
+  --weiss: #FFFFFF;
+  --linie: rgba(44, 29, 20, 0.14);
+}
+
+@theme inline {
+  --color-creme: var(--creme);
+  --color-creme-tief: var(--creme-tief);
+  --color-sand: var(--sand);
+  --color-sand-tief: var(--sand-tief);
+  --color-terra: var(--terra);
+  --color-terra-tief: var(--terra-tief);
+  --color-salbei: var(--salbei);
+  --color-tinte: var(--tinte);
+  --color-tinte-weich: var(--tinte-weich);
+  --color-linie: var(--linie);
+
+  /* Die Schriften werden in app/layout.tsx über next/font geladen und von
+     der eigenen Adresse ausgeliefert — der Browser deiner Besucherin fragt
+     nichts bei Google an. */
+  --font-serif: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-karla), system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Die Kopfzeile liegt über dem Inhalt. Ohne diesen Abstand verschwindet die
+     erste Zeile eines Abschnitts darunter, wenn man eine Sprungmarke anklickt. */
+  scroll-padding-top: 92px;
+}
+
+body {
+  background: var(--creme);
+  color: var(--tinte);
+}
+
+/* --- Tastaturbedienung: der Fokusrahmen muss immer sichtbar sein ---------- */
+:focus-visible {
+  outline: 2px solid var(--terra);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* --- Sanftes Einblenden beim Scrollen ------------------------------------
+   Ohne JavaScript ist alles sofort sichtbar. Erst wenn components/Einblenden
+   die Klasse js-blenden am <html> setzt, wird versteckt und eingeblendet —
+   sonst bliebe die Seite bei abgeschaltetem JavaScript leer. */
+.blende {
+  opacity: 1;
+  transform: none;
+}
+
+.js-blenden .blende {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.js-blenden .blende.sichtbar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js-blenden .blende {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* --- Das Etikett ---------------------------------------------------------
+   Die Ölkarten sind Apothekeretiketten nachempfunden: doppelte Haarlinie,
+   gesperrte Versalien, der botanische Name kursiv. Das ist das eine Element,
+   an das man sich von dieser Seite erinnern soll — deshalb ist der Rest
+   der Seite bewusst ruhig gehalten. */
+.etikett {
+  position: relative;
+  background: var(--creme);
+  border: 1px solid var(--sand-tief);
+  border-radius: 2px;
+}
+
+.etikett::before {
+  content: "";
+  position: absolute;
+  inset: 5px;
+  border: 1px solid var(--sand-tief);
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.etikett:hover {
+  border-color: var(--terra);
+}
+
+.etikett:hover::before {
+  border-color: rgba(176, 84, 58, 0.4);
+}
+
+/* --- Gesperrte Versalien für Augenbrauen und Etikettenzeilen -------------- */
+.gesperrt {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* --- Fließtext auf den Rechtsseiten -------------------------------------- */
+.recht h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 34px 0 10px;
+  color: var(--tinte);
+}
+
+.recht h3 {
+  font-size: 15.5px;
+  font-weight: 700;
+  margin: 24px 0 6px;
+  color: var(--terra-tief);
+}
+
+.recht p,
+.recht li {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--tinte-weich);
+}
+
+.recht p { margin-bottom: 13px; }
+
+.recht ul {
+  margin: 0 0 14px 20px;
+  list-style: disc;
+}
+
+.recht li { margin-bottom: 6px; }
+
+.recht strong {
+  color: var(--tinte);
+  font-weight: 700;
+}
+
+.recht a {
+  color: var(--terra-tief);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.recht a:hover { color: var(--tinte); }
+
+.recht hr {
+  border: none;
+  border-top: 1px solid var(--linie);
+  margin: 30px 0;
+}
+
+/* --- Die Fragenliste: das Pluszeichen dreht sich beim Öffnen -------------- */
+details[open] .fragezeichen {
+  transform: rotate(45deg);
+}
+
+details summary::-webkit-details-marker { display: none; }

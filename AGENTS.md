@@ -1,0 +1,1 @@
+Deutschsprachiges Next.js-Projekt. Texte, Kommentare und Dateinamen auf Deutsch, mit richtigen Umlauten. Alle sichtbaren Texte und alle Links stehen gesammelt in lib/inhalte.ts -- dort wird geaendert, nicht in den Bausteinen.
