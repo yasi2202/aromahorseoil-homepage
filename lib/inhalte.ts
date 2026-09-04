@@ -31,6 +31,17 @@ export const links = {
       mit „Ausbildung“ statt „Horse“ würde die Fütterungs-Masterclass öffnen. */
   kaufen: "mailto:info@pferdeliebehealthy.de?subject=Aroma%20Horse%20Kurs",
 
+  /** Die Kasse für die Testrunde, siehe app/testkunde/page.tsx.
+
+      Sie liegt auf der Schwesterseite, weil dort die Bezahlung läuft
+      (Stripe, Rechnung, Freischaltung in der Akademie). Verkäuferin ist in
+      beiden Fällen dieselbe, nur die Kasse steht an einer Stelle.
+
+      Der Slug muss zu `lib/digital.ts` drüben passen. Ändert er sich dort,
+      führt dieser Knopf ins Leere. */
+  kaufenTestkunde:
+    "https://www.pferdeliebehealthy.de/kasse/aroma-horse-testkunde",
+
   /** Wo die Teilnehmerinnen ihre Lektionen finden */
   akademie: "https://akademieapp.vercel.app",
 
@@ -161,11 +172,16 @@ export const guide = {
 // Der Kurs
 //
 // ACHTUNG, das ist keine Wortklauberei: Der Kurs heißt „Kurs“ und nicht
-// „Ausbildung“, und nirgends auf dieser Seite steht etwas von Zertifikat,
-// Prüfung, Korrektur oder Betreuung. Genau daran hängt, dass er ohne
-// ZFU-Zulassung verkauft werden darf. Sobald hier ein Abschluss versprochen
-// wird, ist es Fernunterricht — und ohne Zulassung wäre der Kaufvertrag
-// unwirksam.
+// „Ausbildung“, und nirgends auf dieser Seite steht etwas von Prüfung,
+// Korrektur oder Betreuung. Genau daran hängt, dass er ohne ZFU-Zulassung
+// verkauft werden darf. Sobald hier ein Abschluss versprochen wird, ist es
+// Fernunterricht, und ohne Zulassung wäre der Kaufvertrag unwirksam.
+//
+// Seit dem 04.09.2026 gibt es am Ende eine TEILNAHMEBESCHEINIGUNG, und die
+// ist erlaubt: Sie bestätigt nur, dass jemand die Lektionen durchgearbeitet
+// hat. Was sie nicht darf, ist bewerten, benoten oder einen Lernerfolg
+// bescheinigen. Genau das wäre die Überwachung des Lernerfolgs, an der die
+// Zulassungspflicht hängt.
 //
 // Wenn die Zulassung eines Tages da ist, kommt die geprüfte Fassung als
 // eigenes Produkt dazu; diese hier bleibt, wie sie ist.
@@ -173,7 +189,7 @@ export const guide = {
 export const kurs = {
   augenbraue: "Für alle, die tiefer wollen",
   titel: "Aroma Horse — der Kurs",
-  preis: "397 €",
+  preis: "899 €",
   preisZusatz: "einmalig, dauerhafter Zugang",
   text: "Zehn Phasen von den Grundlagen der Destillation bis zur eigenen Anwendung am Pferd. Kein Öllexikon zum Auswendiglernen, sondern der Weg dahin, dass du eigene Entscheidungen fachlich begründen kannst. Online, in deinem Tempo, an jeder Lektion Platz für deine Notizen.",
   phasen: [
@@ -233,10 +249,11 @@ export const kursSeite = {
       "Notizen, Lesezeichen und Textmarker zu jeder Lektion, die dir bleiben",
       "Reflexionsfragen zum Selbstnachdenken",
       "Zeitlich unbegrenzter Zugang, auch zu späteren Ergänzungen",
+      "Eine Teilnahmebescheinigung, wenn du alle 54 Lektionen durchgearbeitet hast",
     ],
     nichtDrin: [
-      "Keine Abschlussarbeit und keine Korrektur",
-      "Kein Zertifikat und kein Nachweis",
+      "Keine Prüfung, keine Abschlussarbeit, keine Korrektur",
+      "Keine Benotung und kein geprüfter Abschluss",
       "Keine persönliche Begleitung und keine Beratung zu deinem Pferd",
     ],
     nichtDrinErklaerung:
@@ -253,7 +270,7 @@ export const kursSeite = {
 
   kauf: {
     titel: "Aroma Horse Kurs",
-    preis: "397 €",
+    preis: "899 €",
     zusatz: "einmalig · dauerhafter Zugang · sofort freigeschaltet",
     knopf: "Kurs kaufen",
     hinweis:
@@ -320,6 +337,127 @@ export const fragen = {
         "Nein, und das ist keine Höflichkeitsfloskel. Ätherische Öle sind Begleitung, keine Behandlung. Bei Lahmheit, Fieber, Koliksymptomen, Wunden oder allem, was plötzlich kommt: erst der Tierarzt. Das Fläschchen kann warten.",
     },
   ],
+};
+
+// ---------------------------------------------------------------------------
+// Die Testrunde unter /testkunde
+//
+// Eine eingeladene Seite, kein öffentliches Angebot: Sie steht nicht in der
+// Sitemap, nicht im Menü und ist für Suchmaschinen gesperrt. Wer den Link
+// nicht von Yasemin bekommen hat, findet sie nicht. Das ist Absicht: Neben
+// der öffentlichen Seite mit 899 € darf keine viel günstigere Seite im Index
+// stehen, sonst kauft niemand mehr zum vollen Preis.
+//
+// ▸ DIE FRIST STEHT AN ZWEI STELLEN. Hier im Text und als `verkaufBis` in
+//   pferdeliebehealthy-homepage/lib/digital.ts. Die Kasse weist einen Kauf
+//   nach diesem Tag wirklich ab. Wenn du die Einladung später verschickst,
+//   müssen beide Stellen mitwandern, sonst steht hier ein Datum, das die
+//   Kasse anders sieht.
+//
+// ▸ WAS HIER NICHT STEHEN DARF: Prüfung, Korrektur, Betreuung und das Wort
+//   „Ausbildung". Die Teilnahmebescheinigung darf stehen, sie bestätigt nur die
+//   Teilnahme und bewertet nichts. Der Grund steht oben bei `kurs`.
+// ---------------------------------------------------------------------------
+export const testkunde = {
+  augenbraue: "Persönliche Einladung",
+  titel: "Sei eine der Ersten,\ndie diesen Kurs durchgeht.",
+  vorspann:
+    "Der Aroma Horse Kurs ist fertig. Zehn Phasen, 54 Lektionen, jedes Wort davon von mir geschrieben. Was ihm fehlt, sind Menschen, die ihn einmal von vorne bis hinten durchgearbeitet haben und mir sagen, wo er hakt. Genau dafür ist diese Runde da.",
+  preis: "199 €",
+  preisStatt: "899 €",
+  preisZusatz: "einmalig · dauerhafter Zugang · sofort freigeschaltet",
+  frist: "Dieses Angebot gilt bis zum 30. September 2026. Danach nimmt die Kasse es nicht mehr an, der Kurs kostet dann regulär 899 €.",
+  knopf: "Als Testkundin kaufen",
+
+  /** Was die Testkundin bekommt und was sie dafür gibt. Beides ehrlich. */
+  handel: {
+    titel: "Der Handel",
+    einleitung:
+      "Du zahlst 199 statt 899 €. Nicht, weil du weniger bekommst, sondern weil du mir etwas gibst, das ich mir nicht kaufen kann: den Blick von außen auf einen Kurs, den ich selbst viel zu gut kenne.",
+    duBekommst: {
+      titel: "Du bekommst",
+      punkte: [
+        "Den vollständigen Kurs. Alle zehn Phasen, alle 54 Lektionen, nichts ist gesperrt und nichts kommt später nach.",
+        "199 € statt 899 €, einmalig gezahlt.",
+        "Dauerhaften Zugang, auch zu allem, was ich später ergänze. Und ergänzen werde ich, gerade weil du mir schreibst.",
+        "Eine Teilnahmebescheinigung, wenn du alle 54 Lektionen durchgearbeitet hast.",
+        "Einen direkten Draht zu mir. Wenn dir etwas unklar ist, schreib es mir, ich antworte.",
+      ],
+    },
+    duGibst: {
+      titel: "Du gibst",
+      punkte: [
+        "Nach jeder Phase eine kurze Rückmeldung per Mail. Zwei, drei Sätze reichen: Was hat gesessen, wo bist du hängengeblieben, was hat gefehlt.",
+        "Ehrlichkeit. Ein „war alles super\u201c hilft mir nicht. Die Stelle, an der du dreimal lesen musstest, hilft mir.",
+        "Die Erlaubnis, deine Erfahrung später auf der Kursseite zu zitieren, mit deinem Vornamen oder anonym, ganz wie du willst.",
+      ],
+    },
+    fussnote:
+      "Die Rückmeldung ist eine Bitte, keine Bedingung. Der Zugang bleibt dir, auch wenn das Leben dazwischenkommt und du dich nie meldest. Ich baue kein Angebot, bei dem jemand um seinen Kurs bangen muss.",
+  },
+
+  /** Warum es diese Runde überhaupt gibt. Der ehrliche Teil. */
+  warum: {
+    titel: "Warum ich das mache",
+    absaetze: [
+      "Es gibt bisher keine einzige Stimme zu diesem Kurs. Keine Teilnehmerin, die sagen kann, wie es war, ihn durchzuarbeiten. Ich könnte mir welche ausdenken, das machen genug Leute. Ich hätte lieber echte.",
+      "Und ich weiß, dass ein Kurs beim Schreiben anders aussieht als beim Lesen. Ich kenne jede Lektion auswendig und merke deshalb nicht mehr, an welcher Stelle jemand aussteigt, der das Thema zum ersten Mal sieht. Du merkst es sofort.",
+      "Dafür ist mir dieser Preis das wert. Er ist keine Rabattaktion und kommt so nicht wieder: Wenn die Runde durch ist und der Kurs überarbeitet, kostet er wieder 899 €.",
+    ],
+  },
+
+  /** Für wen die Testrunde nicht das Richtige ist. */
+  nichtFuerDich: {
+    titel: "Sag lieber ab, wenn",
+    punkte: [
+      "du gerade keine Zeit hast, wirklich hineinzugehen. Ein liegengebliebener Zugang hilft uns beiden nicht.",
+      "du einen anerkannten Abschluss suchst. Dieser Kurs ist Lernmaterial, keine geprüfte Ausbildung, und daran ändert die Testrunde nichts.",
+      "du eine Liste „Öl X gegen Problem Y\u201c erwartest. Die gibt es hier nicht, und ich halte sie für gefährlich.",
+      "du möchtest, dass ich dein Pferd aus der Ferne einschätze. Das mache ich nicht, auch nicht im kurzen Draht.",
+    ],
+  },
+
+  /** Wie es nach dem Kauf weitergeht, in vier Schritten. */
+  ablauf: {
+    titel: "Wie es abläuft",
+    schritte: [
+      {
+        titel: "Du kaufst",
+        text: "Über die Kasse auf pferdeliebehealthy.de, dort läuft meine Abrechnung, es ist dieselbe Yasi. Rechnung kommt automatisch.",
+      },
+      {
+        titel: "Du bist drin",
+        text: "Direkt danach bekommst du eine Mail mit deinem persönlichen Zugangslink zur Akademie. Klick drauf, und du bist angemeldet, ein Passwort brauchst du nicht.",
+      },
+      {
+        titel: "Du arbeitest in deinem Tempo",
+        text: "Es gibt keinen Zeitplan und keine Abgabefrist. Zehn Phasen, so schnell oder langsam du willst, am Rechner wie am Handy im Stall.",
+      },
+      {
+        titel: "Du schreibst mir",
+        text: "Nach jeder Phase kurz, was dir aufgefallen ist. Einfach als Antwort auf meine Mail, ich brauche kein Formular.",
+      },
+    ],
+  },
+
+  /** Was ausdrücklich nicht dabei ist. Steht bewusst mitten auf der Seite. */
+  nichtDrin: {
+    titel: "Was nicht dabei ist",
+    punkte: [
+      "Keine Prüfung, keine Abschlussarbeit, keine Korrektur",
+      "Keine Benotung und kein geprüfter Abschluss",
+      "Keine persönliche Beratung zu deinem Pferd",
+    ],
+    erklaerung:
+      "Auch als Testkundin bekommst du Lernmaterial, keine Betreuung. Der kurze Draht zu mir gilt dem Kurs, nicht deinem Pferd: Wenn du wissen willst, ob eine Lektion verständlich ist, schreib mir. Wenn du wissen willst, was dein Pferd braucht, ist das eine Beratung und die gehört nicht hier hinein.",
+  },
+
+  /** Der Kaufblock am Seitenende. */
+  kauf: {
+    titel: "Die Testrunde",
+    hinweis:
+      "Nach dem Kauf bekommst du eine Mail mit deinem persönlichen Zugangslink zur Akademie. Der Zugang bleibt dir dauerhaft, unabhängig davon, ob du mir schreibst.",
+  },
 };
 
 // ---------------------------------------------------------------------------

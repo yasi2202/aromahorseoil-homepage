@@ -9,9 +9,14 @@ import RechtsSeite from "@/components/RechtsSeite";
 // Angepasst wurde:
 //   · Marke und Adresse der Seite
 //   · § 4 beschreibt jetzt ausdrücklich, dass der Kurs Lernmaterial ist und
-//     weder Prüfung, Korrektur noch Zertifikat umfasst. Das ist nicht nur
+//     weder Prüfung noch Korrektur umfasst. Das ist nicht nur
 //     Kundeninformation, daran hängt auch, dass kein Fernunterricht im Sinne
 //     des FernUSG vorliegt.
+//   · Seit dem 04.09.2026 nennt § 4 die Teilnahmebescheinigung. Sie ist
+//     bewusst als reine Teilnahmebestätigung ohne Bewertung beschrieben:
+//     Ein Nachweis über den LERNERFOLG wäre genau das Merkmal, das den Kurs
+//     zulassungspflichtig machen würde. Wer diesen Absatz umformuliert, darf
+//     daraus also kein Zeugnis machen.
 //   · Die Abschnitte zu Futterberatungen und physischen Waren sind entfallen,
 //     hier wird beides nicht verkauft.
 //   · alfima statt ThriveCart als Bestellplattform.
@@ -73,10 +78,16 @@ export default function Agb() {
       <p>
         Ausdrücklich <strong>nicht</strong> Gegenstand des Vertrages sind: eine
         Abschlussprüfung, die Korrektur oder Bewertung von Einsendungen, eine
-        individuelle Lernbegleitung oder Betreuung, die Ausstellung eines
-        Zertifikats oder sonstigen Nachweises sowie eine Beratung zu einem
+        individuelle Lernbegleitung oder Betreuung sowie eine Beratung zu einem
         einzelnen Pferd. Im Kurs enthaltene Reflexionsfragen dienen allein dem
         eigenen Nachdenken; sie werden von uns weder eingefordert noch bewertet.
+      </p>
+      <p>
+        Nach dem Durcharbeiten aller Lektionen stellen wir auf Wunsch eine
+        <strong>Teilnahmebescheinigung</strong> aus. Sie bestätigt allein die
+        Teilnahme am Kurs. Sie setzt keine Prüfung voraus, enthält keine
+        Bewertung und ist kein Nachweis eines Lernerfolgs, eines Abschlusses
+        oder einer Qualifikation.
       </p>
       <p>
         Der Kurs stellt damit keine Ausbildung im Sinne des

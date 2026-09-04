@@ -18,7 +18,7 @@ import Tropfen from "@/components/Tropfen";
 export const metadata: Metadata = {
   title: "Aroma Horse Kurs",
   description:
-    "Zehn Phasen, 54 Lektionen zur Aromatherapie beim Pferd: Hydrolate, Stoffklassen, sichere Anwendung, der Riechtest und die Grenzen. Selbstlernkurs, 397 €.",
+    "Zehn Phasen, 54 Lektionen zur Aromatherapie beim Pferd: Hydrolate, Stoffklassen, sichere Anwendung, der Riechtest und die Grenzen. Selbstlernkurs, 899 €.",
   alternates: { canonical: "/aroma-horse-kurs" },
   openGraph: {
     type: "website",
@@ -42,7 +42,7 @@ const strukturierteDaten = {
   brand: { "@type": "Brand", name: "aromahorseoil" },
   offers: {
     "@type": "Offer",
-    price: "397",
+    price: "899",
     priceCurrency: "EUR",
     availability: "https://schema.org/InStock",
     url: url("/aroma-horse-kurs"),
