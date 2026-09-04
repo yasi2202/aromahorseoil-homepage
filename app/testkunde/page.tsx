@@ -247,6 +247,39 @@ export default function TestkundeSeite() {
         </div>
       </section>
 
+      {/* --- Stimmen ------------------------------------------------------
+          Steht direkt vor dem Kaufblock, weil hier die letzte Frage
+          auftaucht: kann die das überhaupt. Und sie steht bewusst NICHT
+          weiter oben: Erst die Einladung und der ehrliche Grund, dann der
+          Beleg. Umgekehrt läse es sich wie eine Verkaufsseite, die ihre
+          Bewertungen vor sich herträgt. */}
+      <section className="px-6 sm:px-8 pb-16 sm:pb-20">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="font-serif text-[clamp(1.6rem,3.6vw,2.2rem)] leading-[1.15] tracking-[-0.015em]">
+            {testkunde.stimmen.titel}
+          </h2>
+          <p className="mt-4 text-[16px] leading-[1.75] text-tinte-weich">
+            {testkunde.stimmen.einleitung}
+          </p>
+
+          <div className="mt-8 space-y-6">
+            {testkunde.stimmen.liste.map((s) => (
+              <figure
+                key={s.name}
+                className="border-l-2 border-terra/40 pl-5 sm:pl-6"
+              >
+                <blockquote className="font-serif text-[17px] sm:text-[18px] leading-[1.65] text-tinte">
+                  „{s.zitat}“
+                </blockquote>
+                <figcaption className="mt-3 text-[14px] text-tinte-weich">
+                  {s.name} · {s.rolle}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* --- Kaufen -------------------------------------------------------- */}
       <section className="px-6 sm:px-8 pb-20 sm:pb-28">
         <div className="max-w-3xl mx-auto bg-terra text-creme rounded-[26px] px-7 sm:px-12 py-12 sm:py-14 text-center">

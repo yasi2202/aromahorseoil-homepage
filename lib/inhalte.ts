@@ -452,6 +452,53 @@ export const testkunde = {
       "Auch als Testkundin bekommst du Lernmaterial, keine Betreuung. Der kurze Draht zu mir gilt dem Kurs, nicht deinem Pferd: Wenn du wissen willst, ob eine Lektion verständlich ist, schreib mir. Wenn du wissen willst, was dein Pferd braucht, ist das eine Beratung und die gehört nicht hier hinein.",
   },
 
+  /** Stimmen von Kundinnen.
+   *
+   *  ▸ WARUM HIER KEINE STIMME ZUM AROMA-KURS STEHT: Es gibt keine. Genau
+   *    deshalb gibt es diese Runde. Etwas anderes zu behaupten wäre der
+   *    schnellste Weg, das Vertrauen zu verlieren, um das es auf dieser
+   *    Seite geht. Die Überschrift sagt das offen, und der Text davor sagt
+   *    es auch schon.
+   *
+   *  ▸ WOHER SIE KOMMEN: aus Yasemins öffentlichem Google-Unternehmensprofil,
+   *    wörtlich übernommen aus `lib/stimmen.ts` der Schwesterseite. Sie sind
+   *    dort öffentlich, dürfen also zitiert werden, solange sie WÖRTLICH und
+   *    UNVERÄNDERT bleiben. Nur Vornamen, so wie drüben.
+   *
+   *  ▸ WAS HIER NICHT HIN DARF: Stimmen, die Betreuung loben („fühle mich
+   *    bestens betreut"). Auf einer Seite, die ausdrücklich keine Betreuung
+   *    verspricht, wäre das ein Versprechen durch die Hintertür, und genau
+   *    daran hängt die ZFU-Frage. Aus demselben Grund fehlt Marions Stimme,
+   *    die vom Ausbilden zur Aromatherapeutin spricht.
+   *
+   *  ▸ ES IST EINE AUSWAHL, und der Text sagt das. Wer eine Auswahl zeigt
+   *    und den Eindruck erweckt, das seien alle, wirbt irreführend. */
+  stimmen: {
+    titel: "Was andere über meine Kurse sagen",
+    einleitung:
+      "Zum Aroma Horse Kurs gibt es noch keine einzige Stimme, das ist ja der Grund für diese Runde. Was es gibt, sind Stimmen zu meinen anderen Kursen und zur Akademie, in der auch dieser Kurs liegt. Eine Auswahl aus meinem Google-Profil, wörtlich übernommen.",
+    liste: [
+      {
+        zitat:
+          "Auf Instagram bin ich auf die Produkte gestoßen und habe mir ein paar Online Kurse und auch Futtermittel bestellt. Die Onlinekurse sind sehr übersichtlich aufgebaut und gut zu verstehen.",
+        name: "Alina",
+        rolle: "über die Onlinekurse",
+      },
+      {
+        zitat:
+          "Ich bin super begeistert von dem ganzen Layout. Der Inhalt war davor ja schon mega, aber so sieht alles super hochwertig und toll aus. Auch die ganzen Reflexionsfragen sind richtig gut.",
+        name: "Hanna",
+        rolle: "über die Akademie",
+      },
+      {
+        zitat:
+          "Ich freue mich richtig, wenn ich an dem Kurs arbeiten kann. Das ist so viel Wissen, verständlich zusammengefasst. Ich bin total begeistert und würde den Kurs uneingeschränkt weiterempfehlen. Richtig top!",
+        name: "Juliane",
+        rolle: "Teilnehmerin der Fütterungs-Ausbildung",
+      },
+    ],
+  },
+
   /** Der Kaufblock am Seitenende. */
   kauf: {
     titel: "Die Testrunde",
