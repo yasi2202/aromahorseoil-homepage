@@ -4,8 +4,9 @@ import RechtsSeite from "@/components/RechtsSeite";
 // ---------------------------------------------------------------------------
 // Diese Erklärung beschreibt genau das, was diese Seite tatsächlich tut:
 // nichts erheben, nichts speichern, keine Cookies setzen. Es gibt hier kein
-// Formular — der Öl-Guide führt zu alfima, und was dort passiert, steht in
-// der Datenschutzerklärung von alfima.
+// Formular. Der Öl-Guide ist eine PDF-Datei, die direkt von dieser Seite
+// geladen wird, ohne dass jemand etwas eintragen muss. Bis zum 10.09.2026
+// führte er zu alfima, das es nicht mehr gibt.
 //
 // Sobald die Seite selbst Adressen einsammelt (Newsletter, Kontaktformular),
 // muss hier ein Abschnitt dazu ergänzt werden. Und lass den Text einmal über
@@ -76,13 +77,12 @@ export default function Datenschutz() {
         Auswertung der Nutzung.
       </p>
 
-      <h2>Weiterleitung zum Öl-Guide</h2>
+      <h2>Der kostenlose Öl-Guide</h2>
       <p>
-        Der Knopf „Öl-Guide holen&quot; führt auf eine Seite bei alfima. Erst
-        dort geben Sie gegebenenfalls Ihre E-Mail-Adresse an. Für die
-        Verarbeitung auf dieser Seite gilt die Datenschutzerklärung des
-        jeweiligen Anbieters. Beim Klick auf den Link werden keine Daten von
-        uns übermittelt.
+        Den Öl-Guide laden Sie direkt von dieser Website als PDF-Datei
+        herunter. Wir fragen dafür keine Angaben ab, insbesondere keine
+        E-Mail-Adresse. Es fallen dabei nur die technischen Zugriffsdaten
+        an, die bei jedem Abruf dieser Website entstehen.
       </p>
 
       <h2>Verlinkung sozialer Netzwerke</h2>

@@ -16,8 +16,16 @@ export const marke = {
 };
 
 export const links = {
-  /** Der kostenlose Öl-Guide. Liegt bei alfima, genau wie in deiner Instagram-Bio. */
-  oelGuide: "https://alfima.com/pferdeliebehealthy/p/ai-page-3",
+  /** Der kostenlose Öl-Guide, als PDF direkt auf dieser Seite.
+
+      Der Link zeigt bewusst auf /oel-guide und nicht auf die Datei selbst:
+      Dieselbe Adresse gehört in deine Instagram-Bio, und sie soll auch dann
+      noch stimmen, wenn aus dem direkten Download einmal eine Anmeldeseite
+      wird. Dann ändert sich nur app/oel-guide, nicht die Bio.
+
+      Bis zum 10.09.2026 lag der Guide bei alfima. Das gibt es nicht mehr,
+      die alte Adresse lieferte nur noch eine Fehlerseite. */
+  oelGuide: "/oel-guide",
 
   /** Die eigene Verkaufsseite für den Kurs. */
   kursSeite: "/aroma-horse-kurs",
