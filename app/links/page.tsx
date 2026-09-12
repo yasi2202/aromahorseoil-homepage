@@ -26,10 +26,10 @@ export const metadata: Metadata = {
 const eintraege: { titel: string; text: string; href: string; hervor?: boolean; neuesFenster?: boolean }[] = [
   {
     titel: "Mein Öl-Guide",
-    text: "Der sichere Einstieg in sieben Seiten, zum Herunterladen",
-    href: links.oelGuide,
+    text: "Der sanfte Einstieg in sieben Seiten, kostenlos per Mail",
+    // ?von=instagram landet in der Spalte `quelle`: Diese Seite steht nur in der Bio.
+    href: `${links.oelGuide}?von=instagram`,
     hervor: true,
-    neuesFenster: true,
   },
   { titel: "Der Riechtest", text: "Wie dein Pferd sein Öl selbst wählt", href: "/#riechtest" },
   { titel: "Aroma Horse, der Kurs", text: "Zehn Phasen, von der Destillation bis zur Anwendung", href: links.kursSeite },

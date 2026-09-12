@@ -43,7 +43,7 @@ export default function Fusszeile() {
               </Link>
             </li>
             <li>
-              <a href={links.oelGuide} target="_blank" rel="noopener" className="hover:text-tinte">
+              <a href={links.oelGuide} className="hover:text-tinte">
                 Der Öl-Guide
               </a>
             </li>

@@ -43,8 +43,6 @@ export default function Kopfbereich() {
           <div className="mt-9 flex flex-wrap gap-3.5">
             <a
               href={links.oelGuide}
-              target="_blank"
-              rel="noopener"
               className="bg-creme text-tinte font-semibold text-[15px] px-7 py-3.5 rounded-full hover:bg-sand transition-colors"
             >
               {hero.knopf}

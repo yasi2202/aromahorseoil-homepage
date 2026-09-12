@@ -2,15 +2,16 @@ import type { Metadata } from "next";
 import RechtsSeite from "@/components/RechtsSeite";
 
 // ---------------------------------------------------------------------------
-// Diese Erklärung beschreibt genau das, was diese Seite tatsächlich tut:
-// nichts erheben, nichts speichern, keine Cookies setzen. Es gibt hier kein
-// Formular. Der Öl-Guide ist eine PDF-Datei, die direkt von dieser Seite
-// geladen wird, ohne dass jemand etwas eintragen muss. Bis zum 10.09.2026
-// führte er zu alfima, das es nicht mehr gibt.
+// Diese Erklärung beschreibt genau das, was diese Seite tatsächlich tut.
+// Keine Cookies. Seit dem 12.09.2026 gibt es EIN Formular: den Öl-Guide gegen
+// Mailadresse (app/oel-guide). Gespeichert und verschickt wird über
+// pferdeliebehealthy.de, siehe dort lib/oel-guide-server.ts. Ändert sich dort
+// etwas (weitere Felder, Öffnungsmessung, eine Mailstrecke mit Abmeldelink),
+// muss der Abschnitt „Der kostenlose Öl-Guide“ mit.
 //
-// Sobald die Seite selbst Adressen einsammelt (Newsletter, Kontaktformular),
-// muss hier ein Abschnitt dazu ergänzt werden. Und lass den Text einmal über
-// den Händlerbund prüfen, bei dem du ohnehin Mitglied bist.
+// Das Häkchen ist Pflicht (Kopplung wie beim Stall Organizer). Lass das und
+// den ganzen Text einmal über den Händlerbund prüfen, bei dem du ohnehin
+// Mitglied bist.
 // ---------------------------------------------------------------------------
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ export default function Datenschutz() {
   return (
     <RechtsSeite augenbraue="Rechtliches" titel="Datenschutzerklärung">
       <p>
-        Stand: August 2026. Soweit nachstehend keine anderen Angaben gemacht
+        Stand: September 2026. Soweit nachstehend keine anderen Angaben gemacht
         werden, ist die Bereitstellung Ihrer personenbezogenen Daten weder
         gesetzlich noch vertraglich vorgeschrieben. Sie sind zur Bereitstellung
         nicht verpflichtet, eine Nichtbereitstellung hat keine Folgen.
@@ -37,8 +38,9 @@ export default function Datenschutz() {
 
       <h2>Was diese Seite nicht tut</h2>
       <p>
-        Diese Website setzt <strong>keine Cookies</strong>, erhebt keine
-        Anmeldedaten und enthält kein Formular. Die verwendeten Schriftarten
+        Diese Website setzt <strong>keine Cookies</strong>. Das einzige
+        Formular ist die Anmeldung zum Öl-Guide, sie ist weiter unten eigens
+        beschrieben. Die verwendeten Schriftarten
         werden von unserem eigenen Server ausgeliefert; es besteht dabei keine
         Verbindung zu Google Fonts.
       </p>
@@ -79,10 +81,42 @@ export default function Datenschutz() {
 
       <h2>Der kostenlose Öl-Guide</h2>
       <p>
-        Den Öl-Guide laden Sie direkt von dieser Website als PDF-Datei
-        herunter. Wir fragen dafür keine Angaben ab, insbesondere keine
-        E-Mail-Adresse. Es fallen dabei nur die technischen Zugriffsdaten
-        an, die bei jedem Abruf dieser Website entstehen.
+        Den Öl-Guide senden wir Ihnen per E-Mail. Dafür verarbeiten wir Ihre
+        E-Mail-Adresse und, wenn Sie ihn angeben, Ihren Vornamen. Zusätzlich
+        speichern wir den Zeitpunkt Ihrer Anmeldung, den Wortlaut Ihrer
+        Einwilligung, über welche Seite Sie gekommen sind (etwa über unser
+        Instagram-Profil) und den Zeitpunkt, zu dem Sie den Link in unserer
+        E-Mail zum ersten Mal geöffnet haben. Das dient dem Nachweis Ihrer
+        Einwilligung.
+      </p>
+      <p>
+        Mit dem Absenden des Formulars willigen Sie ein, dass wir Ihnen den
+        Guide und danach gelegentlich Tipps zu ätherischen Ölen und Hydrolaten
+        für Pferde per E-Mail senden. Rechtsgrundlage ist Art. 6 Abs. 1 lit. a
+        DSGVO. Weitere E-Mails erhalten Sie erst, nachdem Sie den Link in der
+        ersten E-Mail angeklickt haben (Double-Opt-in-Verfahren); ohne diesen
+        Klick senden wir Ihnen nichts weiter. Sie können Ihre Einwilligung
+        jederzeit mit Wirkung für die Zukunft widerrufen, etwa mit einer kurzen
+        Antwort auf eine unserer E-Mails oder per Nachricht an{" "}
+        <a href="mailto:info@pferdeliebehealthy.de">info@pferdeliebehealthy.de</a>.
+        Wir löschen Ihre Daten dann unverzüglich.
+      </p>
+      <p>
+        Die Angaben aus dem Formular werden über den Server unserer Website
+        pferdeliebehealthy.de verarbeitet, die ebenfalls bei Vercel gehostet
+        wird. Gespeichert werden sie in einer Datenbank des Anbieters Supabase
+        Inc., USA; für den Versand der E-Mails nutzen wir Resend, Inc., USA.
+        Beide Anbieter verarbeiten die Daten in unserem Auftrag auf Grundlage
+        eines Auftragsverarbeitungsvertrags; die Übermittlung in die USA erfolgt
+        auf Grundlage von Standardvertragsklauseln. Nähere Informationen unter{" "}
+        <a href="https://supabase.com/privacy" target="_blank" rel="noopener">
+          supabase.com/privacy
+        </a>{" "}
+        und{" "}
+        <a href="https://resend.com/legal/privacy-policy" target="_blank" rel="noopener">
+          resend.com/legal/privacy-policy
+        </a>
+        .
       </p>
 
       <h2>Verlinkung sozialer Netzwerke</h2>

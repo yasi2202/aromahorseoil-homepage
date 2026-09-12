@@ -15,8 +15,6 @@ export default function GuideBand() {
           </p>
           <a
             href={links.oelGuide}
-            target="_blank"
-            rel="noopener"
             className="mt-8 inline-block bg-creme text-tinte font-semibold text-[15px] px-7 py-3.5 rounded-full hover:bg-sand transition-colors"
           >
             {guide.knopf}

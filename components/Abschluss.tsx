@@ -14,8 +14,6 @@ export default function Abschluss() {
         </p>
         <a
           href={links.oelGuide}
-          target="_blank"
-          rel="noopener"
           className="mt-9 inline-block bg-tinte text-creme font-semibold text-[15px] px-8 py-4 rounded-full hover:bg-terra transition-colors"
         >
           {abschluss.knopf}

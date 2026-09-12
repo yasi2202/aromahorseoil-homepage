@@ -112,8 +112,6 @@ export default function Kopfzeile() {
           <div className="flex items-center gap-3">
             <a
               href={links.oelGuide}
-              target="_blank"
-              rel="noopener"
               className={`hidden sm:inline-block text-sm font-semibold px-5 py-2.5 rounded-full transition-colors ${
                 durchsichtig
                   ? "bg-creme text-tinte hover:bg-sand"
@@ -172,8 +170,6 @@ export default function Kopfzeile() {
           ))}
           <a
             href={links.oelGuide}
-            target="_blank"
-            rel="noopener"
             onClick={() => setOffen(false)}
             className="mt-4 bg-creme text-tinte px-8 py-3.5 rounded-full text-[15px] font-semibold"
           >

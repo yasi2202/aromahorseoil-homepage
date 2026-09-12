@@ -17,5 +17,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.9,
     },
+    {
+      // Seit 12.09.2026 eine eigene Seite mit Anmeldung, vorher nur ein Download.
+      url: `${seitenUrl}/oel-guide`,
+      lastModified: new Date("2026-09-12"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 }

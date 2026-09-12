@@ -16,16 +16,21 @@ export const marke = {
 };
 
 export const links = {
-  /** Der kostenlose Öl-Guide, als PDF direkt auf dieser Seite.
+  /** Der kostenlose Öl-Guide, seit dem 12.09.2026 nur noch gegen Mailadresse.
 
-      Der Link zeigt bewusst auf /oel-guide und nicht auf die Datei selbst:
-      Dieselbe Adresse gehört in deine Instagram-Bio, und sie soll auch dann
-      noch stimmen, wenn aus dem direkten Download einmal eine Anmeldeseite
-      wird. Dann ändert sich nur app/oel-guide, nicht die Bio.
+      /oel-guide ist die Anmeldeseite. Die PDF liegt nicht mehr in public/,
+      sondern im privaten Speicher, und kommt nur über den persönlichen Link
+      aus der Mail (app/oel-guide/laden). Dieselbe Adresse /oel-guide steht in
+      deiner Instagram-Bio und musste dafür nicht geändert werden.
 
-      Bis zum 10.09.2026 lag der Guide bei alfima. Das gibt es nicht mehr,
-      die alte Adresse lieferte nur noch eine Fehlerseite. */
+      Bis zum 10.09.2026 lag der Guide bei alfima, danach zwei Tage als
+      offener Download hier. */
   oelGuide: "/oel-guide",
+
+  /** Der Server, der Anmeldungen speichert und die Mail verschickt. Diese
+      Seite hat selbst keine Datenbank und keinen Mailversand, deshalb reicht
+      sie das Formular dorthin durch (lib/oel-guide-server.ts drüben). */
+  anmeldeServer: "https://www.pferdeliebehealthy.de",
 
   /** Die eigene Verkaufsseite für den Kurs. */
   kursSeite: "/aroma-horse-kurs",
@@ -160,17 +165,47 @@ export const oele = {
 // ---------------------------------------------------------------------------
 // Der Öl-Guide
 // ---------------------------------------------------------------------------
+// Die Punkte beschreiben, was WIRKLICH in der PDF steht (sieben Seiten, Stand
+// 10.09.2026). Bis zum 12.09.2026 versprach die Seite hier eine
+// Verdünnungstabelle und „die fünf Fehler, die ich am häufigsten sehe“, die im
+// Guide gar nicht vorkommen. Wird der Guide erweitert, dürfen die Punkte mit.
 export const guide = {
-  augenbraue: "Kostenlos",
+  augenbraue: "Kostenlos per Mail",
   titel: "Der Öl-Guide",
-  text: "Womit du anfängst, was du im ersten Jahr wirklich brauchst und welche fünf Fehler ich am häufigsten sehe. Zum Herunterladen, ohne Gegenleistung außer deiner Mailadresse.",
+  text: "Was ätherische Öle sind, warum Pferde so fein auf Düfte reagieren und die wichtigste Regel dabei. Sieben Seiten von mir, kostenlos in dein Postfach.",
   punkte: [
-    "Die Grundausstattung: welche Öle, welches Trägeröl, welche Mengen",
-    "Verdünnung in Prozent — mit Tabelle zum Ausdrucken für den Stall",
-    "Der Riechtest Schritt für Schritt, zum Mitnehmen an die Box",
-    "Wann du die Finger davon lässt und stattdessen den Tierarzt rufst",
+    "Was ätherische Öle sind und warum nur naturreine infrage kommen",
+    "Die wichtigste Regel: Dein Pferd entscheidet mit",
+    "Neun Öle im kurzen Porträt, für Ruhe und fürs Wohlbefinden",
+    "Sicherheit zuerst, und deine erste kleine Übung zum Ausprobieren",
   ],
-  knopf: "Öl-Guide herunterladen",
+  knopf: "Öl-Guide holen",
+};
+
+// ---------------------------------------------------------------------------
+// Die Anmeldeseite /oel-guide
+// ---------------------------------------------------------------------------
+export const guideSeite = {
+  augenbraue: "Kostenlos per Mail",
+  titel: "Dein sanfter Einstieg in die Welt der ätherischen Öle.",
+  text: "Sieben Seiten von mir für den Anfang mit deinem Pferd. Trag dich ein, dann kommt der Guide sofort in dein Postfach.",
+  vorname: "Vorname",
+  vornameHinweis: "freiwillig",
+  email: "E-Mail-Adresse",
+  /** MUSS WÖRTLICH GLEICH SEIN mit EINWILLIGUNG_OEL_GUIDE in
+      pferdeliebehealthy-homepage/lib/oel-guide-server.ts. Dort wird der
+      Wortlaut gespeichert, hier sieht ihn die Besucherin. */
+  einwilligung:
+    "Ja, schick mir den Öl-Guide und danach ab und zu Tipps zu ätherischen Ölen und Hydrolaten fürs Pferd per E-Mail. Abmelden kann ich mich jederzeit.",
+  datenschutz: "Was mit deiner Adresse passiert, steht in der",
+  knopf: "Schick mir den Guide",
+  sendet: "Einen Moment …",
+  erfolgTitel: "Schau in dein Postfach.",
+  erfolgText:
+    "Der Guide ist unterwegs. Mit dem Knopf in der Mail öffnest du ihn und kannst ihn speichern. Nichts angekommen? Dann schau kurz im Spam-Ordner nach.",
+  fehlerLink:
+    "Der Link aus deiner Mail hat nicht funktioniert. Trag dich einfach noch einmal ein, dann bekommst du einen neuen.",
+  fehlerAllgemein: "Das hat gerade nicht geklappt. Versuch es bitte gleich noch einmal.",
 };
 
 // ---------------------------------------------------------------------------
