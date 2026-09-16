@@ -5,7 +5,7 @@ import Tropfen from "@/components/Tropfen";
 export default function KursAbschnitt() {
   return (
     <section
-      id="ausbildung"
+      id="kurs"
       className="px-6 sm:px-8 py-20 sm:py-28 bg-creme-tief border-y border-linie"
     >
       <div className="max-w-6xl mx-auto grid lg:grid-cols-[0.9fr_1.1fr] gap-12 lg:gap-20">
@@ -39,7 +39,7 @@ export default function KursAbschnitt() {
             </Link>
             <p className="mt-4 text-[15px] text-tinte-weich">
               {kurs.preis}{" "}
-              <span className="text-tinte-weich/80">— {kurs.preisZusatz}</span>
+              <span className="text-tinte-weich/80">· {kurs.preisZusatz}</span>
             </p>
             <p className="mt-5 text-[14px] text-tinte-weich">
               {kurs.hinweisTeilnehmerin}{" "}

@@ -36,7 +36,7 @@ const karla = Karla({
 
 const TITEL = "aromahorseoil | Ätherische Öle für dein Pferd";
 const BESCHREIBUNG =
-  "Aromatherapie für Pferde mit Yasemin Halac: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten. Kostenloser Öl-Guide und der Aroma Horse Kurs.";
+  "Aromapflege für Pferde mit Yasemin Halac: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten. Kostenloser Öl-Guide und der Aroma Horse Kurs.";
 
 export const metadata: Metadata = {
   // Macht aus allen relativen Angaben unten vollständige Adressen. Ohne sie
@@ -52,13 +52,11 @@ export const metadata: Metadata = {
   creator: "Yasemin Halac",
   publisher: "aromahorseoil",
   keywords: [
-    "Aromatherapie Pferd",
     "ätherische Öle Pferd",
     "Hydrolate Pferd",
     "Riechtest Pferd",
-    "Selbstselektion Pferd",
     "Aromapflege Pferd",
-    "Aromatherapie Pferd Kurs",
+    "Aromapflege Pferd Kurs",
     "Aromapflege lernen",
     "Odenwald",
   ],
@@ -73,7 +71,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/yasi-portrait.jpg",
-        alt: "Yasemin Halac, Aromatherapeutin für Pferde",
+        alt: "Yasemin Halac, Aromapflege für Pferde",
       },
     ],
   },
@@ -93,7 +91,7 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  category: "Pferdegesundheit",
+  category: "Pferdepflege",
 };
 
 // ---------------------------------------------------------------------------
@@ -101,7 +99,7 @@ export const metadata: Metadata = {
 //
 // Damit versteht Google, dass hinter der Seite eine konkrete Person an einem
 // konkreten Ort steht. Das ist die Grundlage dafür, bei Suchen wie
-// „Aromatherapie Pferd Ausbildung" überhaupt in Frage zu kommen.
+// „Aromapflege Pferd Kurs" überhaupt in Frage zu kommen.
 // ---------------------------------------------------------------------------
 const strukturierteDaten = {
   "@context": "https://schema.org",
@@ -128,14 +126,14 @@ const strukturierteDaten = {
       "@type": "Person",
       "@id": url("/#yasemin"),
       name: "Yasemin Halac",
-      jobTitle: "Aromatherapeutin für Pferde",
+      jobTitle: "Futterberaterin und Aromapraktikerin",
       image: url("/images/yasi-helena.jpg"),
       worksFor: { "@id": url("/#unternehmen") },
       knowsAbout: [
-        "Aromatherapie beim Pferd",
+        "Aromapflege beim Pferd",
         "Ätherische Öle",
         "Hydrolate",
-        "Riechtest und Selbstselektion",
+        "Riechtest",
       ],
     },
     {

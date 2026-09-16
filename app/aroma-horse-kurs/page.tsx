@@ -18,14 +18,14 @@ import Tropfen from "@/components/Tropfen";
 export const metadata: Metadata = {
   title: "Aroma Horse Kurs",
   description:
-    "Zehn Phasen, 54 Lektionen zur Aromatherapie beim Pferd: Hydrolate, Stoffklassen, sichere Anwendung, der Riechtest und die Grenzen. Selbstlernkurs, 899 €.",
+    "Zehn Phasen, 54 Lektionen zur Aromapflege beim Pferd: Hydrolate, Stoffklassen, sichere Anwendung, der Riechtest und die Grenzen. Selbstlernkurs, 899 €.",
   alternates: { canonical: "/aroma-horse-kurs" },
   openGraph: {
     type: "website",
     locale: "de_DE",
     title: "Aroma Horse Kurs | aromahorseoil",
     description:
-      "Zehn Phasen, 54 Lektionen zur Aromatherapie beim Pferd. Selbstlernkurs von Yasemin Halac.",
+      "Zehn Phasen, 54 Lektionen zur Aromapflege beim Pferd. Selbstlernkurs von Yasemin Halac.",
     url: "/aroma-horse-kurs",
     images: [{ url: "/images/yasi-helena.jpg" }],
   },

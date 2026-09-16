@@ -66,18 +66,18 @@ export const links = {
 // Der Kopf der Seite
 // ---------------------------------------------------------------------------
 export const hero = {
-  augenbraue: "Aromatherapie für Pferde",
-  titel: "Dein Pferd sagt dir,\nwas es braucht.",
-  text: "Ätherische Öle wirken beim Pferd anders als beim Menschen — feiner, schneller, direkter. Ich zeige dir, wie du sie sicher auswählst, richtig verdünnst und so anbietest, dass dein Pferd selbst entscheiden darf.",
+  augenbraue: "Aromapflege für Pferde",
+  titel: "Dein Pferd sagt dir,\nwelchen Duft es mag.",
+  text: "Pferde riechen um ein Vielfaches feiner als wir. Deshalb gehört zu jedem Öl die Frage, ob dein Pferd es überhaupt riechen möchte. Ich zeige dir, wie du Öle sorgfältig auswählst, richtig verdünnst und so anbietest, dass dein Pferd selbst entscheiden darf.",
   knopf: "Kostenlosen Öl-Guide holen",
-  knopfZweit: "Die Ausbildung ansehen",
+  knopfZweit: "Den Kurs ansehen",
   bild: {
     quelle: "/images/yasi-portrait.jpg",
-    text: "Yasemin Halac, Aromatherapeutin für Pferde",
+    text: "Yasemin Halac, Aromapflege für Pferde",
   },
   /** Die drei kleinen Angaben unter dem Bild */
   eckdaten: [
-    { wert: "10", einheit: "Phasen", text: "in der Ausbildung" },
+    { wert: "10", einheit: "Phasen", text: "im Kurs" },
     { wert: "54", einheit: "Lektionen", text: "zum Nachlesen" },
     { wert: "1", einheit: "Stute", text: "als Lehrmeisterin" },
   ],
@@ -90,12 +90,12 @@ export const riechtest = {
   augenbraue: "Die Methode",
   titel: "Der Riechtest",
   einleitung:
-    "In der Aromapflege beim Pferd wählt nicht der Mensch das Öl aus, sondern das Pferd. Es hat rund 300 Millionen Riechzellen — etwa das Sechzigfache von uns — und eine sehr klare Meinung dazu, was ihm gerade guttut. Der Riechtest ist die Art, diese Meinung zu hören.",
+    "In der Aromapflege beim Pferd bietest du einen Duft an, und dein Pferd zeigt dir, ob es ihn annimmt oder ablehnt. Das sagt etwas über seine Vorliebe, nicht über einen Bedarf. Der Riechtest ist die Art, diese Antwort ernst zu nehmen.",
   schritte: [
     {
       nummer: "Schritt 1",
       titel: "Anbieten",
-      text: "Die geöffnete Flasche etwa eine Handbreit vor der Nüster halten, nicht näher. Dein Pferd muss jederzeit den Kopf wegdrehen können — das ist keine Nebensache, das ist die halbe Methode.",
+      text: "Die geöffnete Flasche etwa eine Handbreit vor der Nüster halten, nicht näher. Dein Pferd muss jederzeit den Kopf wegdrehen können. Das ist keine Nebensache, das ist die halbe Methode.",
     },
     {
       nummer: "Schritt 2",
@@ -104,12 +104,12 @@ export const riechtest = {
     },
     {
       nummer: "Schritt 3",
-      titel: "Annehmen — oder lassen",
+      titel: "Annehmen oder lassen",
       text: "Nur ein Öl, das angenommen wird, kommt zur Anwendung. Ein abgelehntes Öl wird nicht überredet, sondern weggestellt. Nächste Woche kann die Antwort schon eine andere sein.",
     },
   ],
   fussnote:
-    "Der Riechtest ersetzt keine Diagnose. Er sagt dir, womit du arbeiten darfst — nicht, was deinem Pferd fehlt.",
+    "Der Riechtest ersetzt keine Diagnose. Er sagt dir, womit du arbeiten darfst, nicht, was deinem Pferd fehlt. Bei Pferden mit Husten, Asthma oder anderen Atemwegsproblemen setze ich keine Düfte ein und vernebele nichts. Atemwege gehören zur Tierärztin.",
 };
 
 // ---------------------------------------------------------------------------
@@ -125,41 +125,41 @@ export const oele = {
       name: "Lavendel fein",
       botanisch: "Lavandula angustifolia",
       stoffklasse: "Ester · Monoterpenole",
-      text: "Das Öl zum Ankommen. Wird von fast jedem Pferd angenommen und ist deshalb das erste, mit dem ich einer Einsteigerin den Riechtest zeige.",
+      text: "Mild, blumig, vertraut. Wird von fast jedem Pferd angenommen und ist deshalb das erste, mit dem ich einer Einsteigerin den Riechtest zeige.",
     },
     {
       name: "Römische Kamille",
       botanisch: "Chamaemelum nobile",
       stoffklasse: "Ester",
-      text: "Für die feinen, dünnhäutigen Pferde, die auf alles zu viel reagieren. Sehr mild — und sehr teuer, weil die Ausbeute winzig ist.",
+      text: "Fein, apfelartig, sehr mild im Duft. Und sehr teuer, weil die Ausbeute winzig ist.",
     },
     {
       name: "Weihrauch",
       botanisch: "Boswellia carterii",
       stoffklasse: "Monoterpene",
-      text: "Wird oft angenommen, wenn der Atem flach geht und das Pferd nicht richtig durchschnaufen mag. Ein Öl, bei dem viele Menschen mitatmen.",
+      text: "Warm, harzig, würzig. Wird von vielen Pferden gern angenommen.",
     },
     {
       name: "Pfefferminze",
       botanisch: "Mentha × piperita",
       stoffklasse: "Monoterpenole · Ketone",
-      text: "Wach, klar, kühl — und wegen des Ketonanteils eines der Öle, bei denen Dosierung und Abstand wirklich zählen. Nichts für nebenbei.",
+      text: "Frisch und kühl im Duft. Wegen des Ketonanteils eines der Öle, bei denen Dosierung und Abstand wirklich zählen. Nichts für nebenbei.",
     },
     {
       name: "Atlaszeder",
       botanisch: "Cedrus atlantica",
       stoffklasse: "Sesquiterpene",
-      text: "Schwer, holzig, bodennah. Wird häufig von Pferden gewählt, die viel Wechsel hinter sich haben — neuer Stall, neue Herde, neuer Mensch.",
+      text: "Schwer, holzig, bodennah. Ein tiefer, warmer Duft, den viele Pferde gern annehmen.",
     },
     {
       name: "Rosengeranie",
       botanisch: "Pelargonium graveolens",
       stoffklasse: "Monoterpenole",
-      text: "Das Ausgleichsöl. Riecht für viele Menschen zu blumig und wird von Pferden trotzdem oft und deutlich angenommen.",
+      text: "Rosig und frisch. Riecht für viele Menschen zu blumig und wird von Pferden trotzdem oft deutlich angenommen.",
     },
   ],
   fussnote:
-    "Angaben zur Stoffklasse sind fachliche Einordnung, keine Heilaussage. Welches Öl für dein Pferd passt, entscheidet der Riechtest — nicht diese Liste.",
+    "Angaben zur Stoffklasse sind fachliche Einordnung, keine Heilaussage. Wie diese Öle beim Pferd wirken, ist wissenschaftlich kaum untersucht. Welches Öl für dein Pferd passt, entscheidet der Riechtest, nicht diese Liste.",
 };
 
 // ---------------------------------------------------------------------------
@@ -176,7 +176,7 @@ export const guide = {
   punkte: [
     "Was ätherische Öle sind und warum nur naturreine infrage kommen",
     "Die wichtigste Regel: Dein Pferd entscheidet mit",
-    "Neun Öle im kurzen Porträt, für Ruhe und fürs Wohlbefinden",
+    "Neun Öle im kurzen Porträt",
     "Sicherheit zuerst, und deine erste kleine Übung zum Ausprobieren",
   ],
   knopf: "Öl-Guide holen",
@@ -231,13 +231,13 @@ export const guideSeite = {
 // ---------------------------------------------------------------------------
 export const kurs = {
   augenbraue: "Für alle, die tiefer wollen",
-  titel: "Aroma Horse — der Kurs",
+  titel: "Aroma Horse, der Kurs",
   preis: "899 €",
   preisZusatz: "einmalig, dauerhafter Zugang",
   text: "Zehn Phasen von den Grundlagen der Destillation bis zur eigenen Anwendung am Pferd. Kein Öllexikon zum Auswendiglernen, sondern der Weg dahin, dass du eigene Entscheidungen fachlich begründen kannst. Online, in deinem Tempo, an jeder Lektion Platz für deine Notizen.",
   phasen: [
     "Hydrolate für Pferde",
-    "Grundlagen der Aromatherapie",
+    "Grundlagen der Aromapflege",
     "Biochemie der ätherischen Öle",
     "Die Stoffklassen",
     "Anatomie und Physiologie des Pferdes",
@@ -272,7 +272,7 @@ export const kursSeite = {
     titel: "Für wen das ist",
     passt: [
       "Du hast ein eigenes Pferd und willst mehr können, als einer Empfehlung aus dem Internet zu folgen.",
-      "Du willst verstehen, warum ein Öl wirkt, nicht nur, dass es wirkt.",
+      "Du willst verstehen, was in einem Öl steckt und wo seine Grenzen liegen.",
       "Du hast schon ein paar Fläschchen zu Hause und traust dich nicht richtig daran.",
       "Du arbeitest bereits mit Pferden und willst Aromapflege dazunehmen.",
     ],
@@ -300,13 +300,13 @@ export const kursSeite = {
       "Keine persönliche Begleitung und keine Beratung zu deinem Pferd",
     ],
     nichtDrinErklaerung:
-      "Das steht hier so deutlich, weil es ehrlicher ist als ein Sternchen im Kleingedruckten: Du kaufst Wissen, keine Betreuung. Wenn du eine geprüfte Ausbildung mit Abschluss suchst, ist das hier nicht das Richtige — melde dich, dann sage ich dir Bescheid, sobald es eine gibt.",
+      "Das steht hier so deutlich, weil es ehrlicher ist als ein Sternchen im Kleingedruckten: Du kaufst Wissen, keine Betreuung. Wenn du eine geprüfte Ausbildung mit Abschluss suchst, ist das hier nicht das Richtige. Melde dich, dann sage ich dir Bescheid, sobald es eine gibt.",
   },
 
   ehrlich: {
     titel: "Zwei Dinge vorweg",
     absaetze: [
-      "Ich verdiene an keinem einzigen Fläschchen. Ich empfehle keine Marke und bekomme von niemandem Provision. Deshalb steht in diesem Kurs, woran du gute Qualität selbst erkennst — statt einer Einkaufsliste, die mir nützt.",
+      "Ich verdiene an keinem einzigen Fläschchen. Ich empfehle keine Marke und bekomme von niemandem Provision. Deshalb steht in diesem Kurs, woran du gute Qualität selbst erkennst, statt einer Einkaufsliste, die mir nützt.",
       "Und: Ätherische Öle sind Begleitung, keine Behandlung. Ein großer Teil dieses Kurses handelt davon, wann du die Finger davon lässt und stattdessen den Tierarzt rufst. Wer etwas anderes verspricht, verkauft dir etwas.",
     ],
   },
@@ -317,7 +317,7 @@ export const kursSeite = {
     zusatz: "einmalig · dauerhafter Zugang · sofort freigeschaltet",
     knopf: "Kurs kaufen",
     hinweis:
-      "Nach dem Kauf bekommst du eine Mail mit deinem persönlichen Zugangslink zur Akademie. Klick drauf, und du bist drin — kein Passwort nötig.",
+      "Nach dem Kauf bekommst du eine Mail mit deinem persönlichen Zugangslink zur Akademie. Klick drauf, und du bist drin, kein Passwort nötig.",
   },
 };
 
@@ -328,9 +328,9 @@ export const ueberMich = {
   augenbraue: "Wer hier schreibt",
   titel: "Yasi",
   absaetze: [
-    "Ich bin Yasemin, Ernährungsberaterin für Pferde aus Buchen im Odenwald, und zur Aromatherapie bin ich über meine eigene Stute gekommen: Helena, mit der Diagnose PPID.",
-    "Über die Fütterung hatte ich viel in der Hand. Über alles andere — Anspannung, Umstellungen, die Tage, an denen sie einfach nicht bei sich war — lange nicht. Ätherische Öle waren der erste Bereich, in dem ich gemerkt habe, dass Helena mir sehr genau sagen kann, was sie gerade möchte. Ich musste nur lernen, hinzusehen.",
-    "Heute arbeite ich mit Ölen und Hydrolaten als Begleitung — neben dem Tierarzt, neben der Fütterung, nie an ihrer Stelle. Und ich gebe weiter, was ich dabei gelernt habe: sauber, fachlich, ohne Versprechen, die kein Öl halten kann.",
+    "Ich bin Yasemin, Ernährungsberaterin für Pferde aus Buchen im Odenwald, und zur Aromapflege bin ich über meine eigene Stute gekommen: Helena, mit der Diagnose PPID.",
+    "Über die Fütterung hatte ich viel in der Hand. Über alles andere lange nicht: Anspannung, Umstellungen, die Tage, an denen sie einfach nicht bei sich war. Ätherische Öle waren der erste Bereich, in dem ich gemerkt habe, dass Helena mir sehr genau sagen kann, was sie gerade möchte. Ich musste nur lernen, hinzusehen.",
+    "Heute arbeite ich mit Ölen und Hydrolaten als Begleitung. Neben dem Tierarzt, neben der Fütterung, nie an ihrer Stelle. Und ich gebe weiter, was ich dabei gelernt habe: sauber, fachlich, ohne Versprechen, die kein Öl halten kann.",
   ],
   bild: {
     quelle: "/images/yasi-helena.jpg",
@@ -352,7 +352,7 @@ export const fragen = {
     {
       frage: "Sind ätherische Öle für Pferde überhaupt sicher?",
       antwort:
-        "Richtig eingesetzt ja, falsch eingesetzt nein. Ätherische Öle sind hochkonzentrierte Pflanzenauszüge — für einen Tropfen Rosenöl brauchst du Blüten aus einem ganzen Beet. Unverdünnt aufs Fell, in die Nähe der Augen, ins Futter oder über die Tränke haben sie nichts zu suchen. Entscheidend sind drei Dinge: Verdünnung, Aufnahmeweg und die Zustimmung des Pferdes.",
+        "Richtig eingesetzt ja, falsch eingesetzt nein. Ätherische Öle sind hochkonzentrierte Pflanzenauszüge. Für einen Tropfen Rosenöl brauchst du Blüten aus einem ganzen Beet. Unverdünnt aufs Fell, in die Nähe der Augen, ins Futter oder über die Tränke haben sie nichts zu suchen. Entscheidend sind drei Dinge: Verdünnung, Aufnahmeweg und die Zustimmung des Pferdes.",
     },
     {
       frage: "Woran erkenne ich gute Qualität?",
@@ -362,17 +362,32 @@ export const fragen = {
     {
       frage: "Was ist der Unterschied zwischen Öl und Hydrolat?",
       antwort:
-        "Beide entstehen bei derselben Wasserdampfdestillation. Das ätherische Öl ist der fettlösliche Teil, der oben aufschwimmt; das Hydrolat ist das Destillationswasser darunter, angereichert mit den wasserlöslichen Pflanzenstoffen. Hydrolate sind um ein Vielfaches milder und für den Stallalltag oft der bessere Einstieg — besonders bei jungen, alten oder sehr empfindlichen Pferden.",
+        "Beide entstehen bei derselben Wasserdampfdestillation. Das ätherische Öl ist der fettlösliche Teil, der oben aufschwimmt; das Hydrolat ist das Destillationswasser darunter, angereichert mit den wasserlöslichen Pflanzenstoffen. Hydrolate sind um ein Vielfaches milder und für den Stallalltag oft der bessere Einstieg, besonders bei jungen, alten oder sehr empfindlichen Pferden.",
     },
     {
       frage: "Und bei trächtigen Stuten, Fohlen oder alten Pferden?",
       antwort:
-        "Da wird die Liste der Öle kurz und die Verdünnung niedrig. Ketonhaltige Öle wie Pfefferminze, Salbei oder Rosmarin gehören dort nicht hin. Wenn du unsicher bist, arbeite mit Hydrolaten oder gar nicht — und sprich vorher mit deinem Tierarzt.",
+        "Da wird die Liste der Öle kurz und die Verdünnung niedrig. Ketonhaltige Öle wie Pfefferminze, Salbei oder Rosmarin gehören dort nicht hin. Wenn du unsicher bist, arbeite mit Hydrolaten oder gar nicht. Und sprich vorher mit deinem Tierarzt.",
+    },
+    {
+      frage: "Und bei Pferden mit Husten oder Asthma?",
+      antwort:
+        "Bei Pferden mit Husten, Asthma oder anderen Atemwegsproblemen setze ich keine Düfte ein und vernebele nichts. Atemwege gehören zur Tierärztin. Ätherische Öle können gereizte Atemwege zusätzlich reizen, auch beim Riechtest.",
     },
     {
       frage: "Kann ich Öle einfach ins Futter geben?",
       antwort:
         "Nein. Die innerliche Anwendung ist der heikelste Weg überhaupt und gehört in fachkundige Hände, nicht in den Futtereimer. Für zu Hause bleibt es beim Riechen und, gut verdünnt, beim Auftragen auf die Haut.",
+    },
+    {
+      frage: "Was ist mit dem Equidenpass?",
+      antwort:
+        "Schau vorher in den Pass. Ist dein Pferd nicht als „nicht zur Schlachtung bestimmt“ eingetragen, sprich vor jeder Anwendung auf der Haut mit deiner Tierärztin.",
+    },
+    {
+      frage: "Und bei Turnierpferden?",
+      antwort:
+        "Sei hier sehr vorsichtig. Einzelne Inhaltsstoffe ätherischer Öle, zum Beispiel Campher oder Menthol, können bei Dopingkontrollen auffallen. Prüf vor jedem Turnier die aktuellen Regeln deines Verbands und sprich mit deiner Tierärztin.",
     },
     {
       frage: "Ersetzt Aromapflege den Tierarzt?",
@@ -555,6 +570,6 @@ export const testkunde = {
 // ---------------------------------------------------------------------------
 export const abschluss = {
   titel: "Fang mit einem Tropfen an.",
-  text: "Der Öl-Guide ist kostenlos und in zehn Minuten gelesen. Danach weißt du, was du kaufen musst — und was nicht.",
+  text: "Der Öl-Guide ist kostenlos und in zehn Minuten gelesen. Danach weißt du, was du kaufen musst und was nicht.",
   knopf: "Öl-Guide holen",
 };

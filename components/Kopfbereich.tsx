@@ -48,7 +48,7 @@ export default function Kopfbereich() {
               {hero.knopf}
             </a>
             <a
-              href="#ausbildung"
+              href="#kurs"
               className="border border-creme/45 text-creme font-medium text-[15px] px-7 py-3.5 rounded-full hover:bg-creme/10 transition-colors"
             >
               {hero.knopfZweit}

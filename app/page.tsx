@@ -13,7 +13,7 @@ import { url } from "@/lib/seo";
 // Zwei Ergänzungen für Google:
 //
 // FAQPage  — die häufigen Fragen können direkt im Suchergebnis erscheinen.
-// Course   — die Ausbildung kann als Kurs erkannt werden.
+// Course   — der Kurs kann als Kurs erkannt werden.
 //
 // Beide beschreiben nur, was auf der Seite ohnehin steht. Das ist wichtig:
 // Angaben, die im sichtbaren Text fehlen, wertet Google als Verstoß.
@@ -32,7 +32,7 @@ const strukturierteDaten = {
     },
     {
       "@type": "Course",
-      "@id": url("/#ausbildung"),
+      "@id": url("/#kurs"),
       name: kurs.titel,
       description: kurs.text,
       inLanguage: "de-DE",

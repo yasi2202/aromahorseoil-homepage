@@ -31,7 +31,7 @@ const eintraege: { titel: string; text: string; href: string; hervor?: boolean; 
     href: `${links.oelGuide}?von=instagram`,
     hervor: true,
   },
-  { titel: "Der Riechtest", text: "Wie dein Pferd sein Öl selbst wählt", href: "/#riechtest" },
+  { titel: "Der Riechtest", text: "Wie dein Pferd bei der Auswahl mitentscheidet", href: "/#riechtest" },
   { titel: "Aroma Horse, der Kurs", text: "Zehn Phasen, von der Destillation bis zur Anwendung", href: links.kursSeite },
   { titel: "Über mich", text: "Wie ich über meine Stute Helena zu den Ölen kam", href: "/#ueber-mich" },
   {

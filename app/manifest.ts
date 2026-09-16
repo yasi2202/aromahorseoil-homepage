@@ -13,10 +13,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "aromahorseoil — Ätherische Öle für dein Pferd",
+    name: "aromahorseoil | Ätherische Öle für dein Pferd",
     short_name: "aromahorseoil",
     description:
-      "Aromatherapie für Pferde: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten.",
+      "Aromapflege für Pferde: ätherische Öle sicher auswählen, richtig verdünnen und über den Riechtest anbieten.",
     start_url: "/",
     display: "standalone",
     orientation: "portrait",
