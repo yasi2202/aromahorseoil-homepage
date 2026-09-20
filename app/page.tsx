@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Kopfbereich from "@/components/Kopfbereich";
 import Riechtest from "@/components/Riechtest";
 import Oelkarte from "@/components/Oelkarte";
@@ -18,6 +19,19 @@ import { url } from "@/lib/seo";
 // Beide beschreiben nur, was auf der Seite ohnehin steht. Das ist wichtig:
 // Angaben, die im sichtbaren Text fehlen, wertet Google als Verstoß.
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Seit dem 20.09.2026 liegt die Startseite der Marke auch auf
+// pferdeliebehealthy.de/aroma, mit denselben Texten. Zwei Seiten mit
+// demselben Inhalt schaden beiden bei Google, deshalb zeigt die kanonische
+// Adresse dorthin: Die Adresse ohne „vercel“ ist die, die zählen soll.
+//
+// Die übrigen Seiten hier (Kurs, Öl-Guide, Rechtstexte) behalten ihre eigene
+// kanonische Adresse aus app/layout.tsx, sie gibt es drüben noch nicht.
+// ---------------------------------------------------------------------------
+export const metadata: Metadata = {
+  alternates: { canonical: "https://www.pferdeliebehealthy.de/aroma" },
+};
+
 const strukturierteDaten = {
   "@context": "https://schema.org",
   "@graph": [
