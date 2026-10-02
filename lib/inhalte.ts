@@ -59,7 +59,7 @@ export const links = {
   akademie: "https://akademie.pferdeliebehealthy.de",
 
   instagram: "https://www.instagram.com/aromahorseoil",
-  schwesterseite: "https://pferdeliebehealthy-homepage.vercel.app",
+  schwesterseite: "https://www.pferdeliebehealthy.de",
 };
 
 // ---------------------------------------------------------------------------
