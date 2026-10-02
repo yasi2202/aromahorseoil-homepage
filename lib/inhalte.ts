@@ -56,7 +56,7 @@ export const links = {
     "https://www.pferdeliebehealthy.de/kasse/aroma-horse-testkunde",
 
   /** Wo die Teilnehmerinnen ihre Lektionen finden */
-  akademie: "https://akademieapp.vercel.app",
+  akademie: "https://akademie.pferdeliebehealthy.de",
 
   instagram: "https://www.instagram.com/aromahorseoil",
   schwesterseite: "https://pferdeliebehealthy-homepage.vercel.app",
