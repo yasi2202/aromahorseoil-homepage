@@ -29,7 +29,8 @@ import { url } from "@/lib/seo";
 // kanonische Adresse aus app/layout.tsx, sie gibt es drüben noch nicht.
 // ---------------------------------------------------------------------------
 export const metadata: Metadata = {
-  alternates: { canonical: "https://www.pferdeliebehealthy.de/aroma" },
+  // Seit 19.10.2026 die eigene Domain (next.config.ts leitet ohnehin weiter).
+  alternates: { canonical: "https://aromahorseoil.de" },
 };
 
 const strukturierteDaten = {

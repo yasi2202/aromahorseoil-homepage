@@ -1,24 +1,8 @@
 import type { MetadataRoute } from "next";
-import { seitenUrl } from "@/lib/seo";
 
-// Die Liste der Adressen, die Google kennen soll. Impressum und Datenschutz
-// stehen bewusst nicht darin — sie sollen nicht im Suchindex landen.
+// Seit 19.10.2026 leiten Startseite, Kurs und Öl-Guide auf aromahorseoil.de
+// weiter (next.config.ts). Google soll hier nichts mehr finden, die Sitemap
+// der Marke liefert aromahorseoil.de selbst.
 export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: `${seitenUrl}/`,
-      lastModified: new Date("2026-08-27"),
-      changeFrequency: "monthly",
-      priority: 1,
-    },
-    // /aroma-horse-kurs leitet seit 17.10.2026 auf
-    // www.pferdeliebehealthy.de/aroma/kurs weiter (next.config.ts).
-    {
-      // Seit 12.09.2026 eine eigene Seite mit Anmeldung, vorher nur ein Download.
-      url: `${seitenUrl}/oel-guide`,
-      lastModified: new Date("2026-09-12"),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-  ];
+  return [];
 }
