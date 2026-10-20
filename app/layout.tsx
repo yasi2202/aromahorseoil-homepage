@@ -120,7 +120,7 @@ const strukturierteDaten = {
         addressCountry: "DE",
       },
       founder: { "@id": url("/#yasemin") },
-      sameAs: [links.instagram],
+      sameAs: [links.instagram, links.pinterest],
     },
     {
       "@type": "Person",

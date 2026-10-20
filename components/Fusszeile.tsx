@@ -64,6 +64,11 @@ export default function Fusszeile() {
               </a>
             </li>
             <li>
+              <a href={links.pinterest} target="_blank" rel="noopener" className="hover:text-tinte">
+                Pinterest
+              </a>
+            </li>
+            <li>
               <a href={links.schwesterseite} target="_blank" rel="noopener" className="hover:text-tinte">
                 Pferdeliebehealthy
               </a>
